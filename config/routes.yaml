@@ -1,0 +1,22 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+artists_by_token:
+  path: /artists/{sToken}
+  defaults: { _controller: App\Controller\ArtistController::getArtistByToken}
+  methods:  [GET]
+
+artists:
+  path: /artists
+  defaults: { _controller: App\Controller\ArtistController::getArtists}
+  methods:  [GET]
+
+album_by_token:
+  path: /albums/{sToken}
+  defaults: { _controller: App\Controller\AlbumController::getAlbumByToken}
+  methods:  [GET]
